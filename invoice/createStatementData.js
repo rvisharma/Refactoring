@@ -13,10 +13,14 @@ function createStatementData(invoice, plays) {
       aPerformance,
       playFor(aPerformance)
     );
-    const result = { ...aPerformance };
-    result.play = calculator.play;
-    result.amount = calculator.amount;
-    result.volumeCredits = calculator.volumeCredits;
+
+    const result = {
+      ...aPerformance,
+      play: calculator.play,
+      amount: calculator.amount,
+      volumeCredits: calculator.volumeCredits
+    };
+
     return result;
   }
 
